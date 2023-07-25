@@ -6,6 +6,7 @@ from typing import List, Tuple
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
+    ''' index range'''
     start_index = (page - 1) * page_size
     end_index = page * page_size
     return start_index, end_index
@@ -31,10 +32,11 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        ''' get page'''
         assert isinstance(page, int)
         assert isinstance(page_size, int)
-        page > 0
-        page_size > 0
+        assert page > 0
+        assert page_size > 0
         start_index, end_index = index_range(page, page_size)
         data = self.dataset()
         if len(data) < end_index:
