@@ -13,6 +13,8 @@ class BasicCache(BaseCaching):
         # Assign the value to the key in the dictionary if key is not None
         if key:
             self.cache_data[key] = item
+        else:
+            pass
 
     def get(self, key):
         # If key is None or if the key doesn't exist in cache_data, return None
