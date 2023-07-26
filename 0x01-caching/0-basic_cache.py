@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 ''' Basic dictionary'''
 from base_caching import BaseCaching
 
@@ -6,7 +6,7 @@ from base_caching import BaseCaching
 class BasicCache(BaseCaching):
     ''' Basic cache class '''
     def __init__(self):
-        # Create an empty dictionary as an instance
+        ''' Create an empty dictionary as an instance'''
         self.cache_data = {}
 
     def put(self, key, item):
