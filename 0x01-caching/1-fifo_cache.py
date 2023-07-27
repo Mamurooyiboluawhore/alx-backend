@@ -21,4 +21,5 @@ class FIFOCache(BaseCaching):
             print("DISCARD:", oldest_key)
 
     def get(self, key):
+        ''' get data from cache'''
         return self.cache_data.get(key, None)
