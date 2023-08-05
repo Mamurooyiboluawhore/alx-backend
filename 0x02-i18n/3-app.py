@@ -15,6 +15,7 @@ class Config(object):
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
+
 @babel.localeselector
 def get_locale():
     ''' a function that gets local'''
